@@ -1,9 +1,8 @@
 import React from "react";
 import { useTheme, createUseStyles } from "react-jss";
-import { Theme } from "../../types";
 import { useHistory } from "react-router-dom";
 
-let useStyles = createUseStyles((theme: Theme) => ({
+let useStyles = createUseStyles(() => ({
     root: {
         display: "flex",
         alignItems: "center",
@@ -37,7 +36,6 @@ const AppBar = () => {
     const history = useHistory();
 
     const pathname = history.location.pathname;
-    const pathLabel = mapPathname(pathname);
 
     const theme = useTheme();
     const classes = useStyles({theme});
