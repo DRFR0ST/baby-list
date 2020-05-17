@@ -1,7 +1,7 @@
 {
   "name": "baby-shopping-list",
   "version": "0.1.0",
-  "homepage": "https://drfr0st.github.io/baby-shopping-list",
+  "homepage": "https://drfr0st.github.io/baby-list",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
