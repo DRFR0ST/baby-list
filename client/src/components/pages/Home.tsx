@@ -43,19 +43,24 @@ const Home = () => {
     const classes = useStyles({theme});
 
     // @ts-ignore
-    return <div className={classes.root}>{list === null && <Loader color={theme?.palette?.primary?.main}
+    const primaryMain = theme?.palette?.primary.main;
+
+    return <div className={classes.root}>
+            {list === null && <div style={{
+                                    position: "absolute",
+                                    left: "50%",
+                                    right: "50%",
+                                    zIndex: 999,
+                                    width: "100px",
+                                    height: "100px"
+                                }}>
+                                <Loader color={primaryMain}
                                 type="TailSpin"
                                 height={100}
                                 width={100}
                                 timeout={999999} //3 secs
-                                // @ts-ignore
-                                style={{
-                                    position: "absolute",
-                                    left: "50%",
-                                    right: "50%",
-                                    zIndex: 999
-                                }}
-                                />}
+                            
+                                /></div>}
         {/* <div className={classes.bgWrapper}><img src={backgroundImg} alt="bg" /></div> */}
         {list !== null && <div className={classes.list}>
             {
