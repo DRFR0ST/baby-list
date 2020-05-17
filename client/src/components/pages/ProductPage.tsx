@@ -4,6 +4,7 @@ import { useCommand } from "../../api/hooks";
 import { ProductInfo } from "../../api/commands";
 import { useForkedState } from "../../utils/hooks/general";
 import { isLoaded } from "../../api/utils";
+// @ts-ignore
 import Loader from 'react-loader-spinner'
 import { useTheme } from "react-jss";
 

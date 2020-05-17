@@ -41,6 +41,17 @@
     ]
   },
   "devDependencies": {
+    "@types/react-loader-spinner": "^3.1.0",
     "@types/react-router-dom": "^5.1.5"
-  }
+  },
+  "compilerOptions": {
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "types"
+  ]
 }
