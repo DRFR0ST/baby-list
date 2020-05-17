@@ -42,12 +42,13 @@ const Home = () => {
     const theme = useTheme();
     const classes = useStyles({theme});
 
-    return <div className={classes.root}>
-        {list === null && <Loader color={theme?.palette?.primary?.main}
+    // @ts-ignore
+    return <div className={classes.root}>{list === null && <Loader color={theme?.palette?.primary?.main}
                                 type="TailSpin"
                                 height={100}
                                 width={100}
                                 timeout={999999} //3 secs
+                                // @ts-ignore
                                 style={{
                                     position: "absolute",
                                     left: "50%",
