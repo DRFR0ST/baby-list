@@ -19,12 +19,8 @@ const ProductPage = () => {
     height={100}
     width={100}
     timeout={999999} //3 secs
-    style={{
-        position: "absolute",
-        left: "50%",
-        right: "50%",
-        zIndex: 999
-    }}
+    // @ts-ignore
+    style={{position: "absolute",left: "50%",right: "50%",zIndex: 999}}
     />
     
     if(productRq && productRq.status !== 200) return <p>Product not found</p>
