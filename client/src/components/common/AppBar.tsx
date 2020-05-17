@@ -20,22 +20,20 @@ let useStyles = createUseStyles(() => ({
     }
 }));
 
-const PATH_MAP = {
-    "/": "Home",
-    "/product/": "Home > Product"
-}
+// const PATH_MAP = {
+//     "/": "Home",
+//     "/product/": "Home > Product"
+// }
 
-const mapPathname = (pathname: string) => {
-    if(pathname === "/") return PATH_MAP["/"];
-    if(pathname.split("/")[1] === "product") return PATH_MAP["/product/"]
+// const mapPathname = (pathname: string) => {
+//     if(pathname === "/") return PATH_MAP["/"];
+//     if(pathname.split("/")[1] === "product") return PATH_MAP["/product/"]
 
-    return PATH_MAP[pathname as keyof typeof PATH_MAP]
-}
+//     return PATH_MAP[pathname as keyof typeof PATH_MAP]
+// }
 
 const AppBar = () => {
     const history = useHistory();
-
-    const pathname = history.location.pathname;
 
     const theme = useTheme();
     const classes = useStyles({theme});
