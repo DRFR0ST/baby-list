@@ -1,0 +1,10 @@
+{
+  "name": "baby-shopping-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": ["client", "server"],
+  "repository": "https://github.com/DRFR0ST/baby-shopping-list",
+  "author": "Mike Eling <mike.eling97@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
