@@ -1,7 +1,3 @@
-const cors = require('cors')({origin: true});
-
-console.log(cors);
-
 export type TResponse = {status: number, message?: string, data: any};
 
 export interface IClient {
