@@ -21,13 +21,8 @@ export const useForkedState = <T extends any[], R>(fn: (...args: T) => R, ...arg
     return ref.current;
 }
 
-let id = 0;
 export const useSignal = () => {
-    const [, setState] = useState(0);
+   const [, setState] = useState();
 
-    const signal = () => {
-        setState(id++);
-    }
-
-    return signal;
+    return () => setState({});
 }
