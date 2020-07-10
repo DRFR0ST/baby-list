@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/baby-list/static/css/main.32eebc0b.chunk.css",
-    "main.js": "/baby-list/static/js/main.50b7aa98.chunk.js",
-    "main.js.map": "/baby-list/static/js/main.50b7aa98.chunk.js.map",
+    "main.css": "/baby-list/static/css/main.08ba85b9.chunk.css",
+    "main.js": "/baby-list/static/js/main.a5fd2b67.chunk.js",
+    "main.js.map": "/baby-list/static/js/main.a5fd2b67.chunk.js.map",
     "runtime-main.js": "/baby-list/static/js/runtime-main.c3c22df0.js",
     "runtime-main.js.map": "/baby-list/static/js/runtime-main.c3c22df0.js.map",
     "static/css/2.f87e9f44.chunk.css": "/baby-list/static/css/2.f87e9f44.chunk.css",
-    "static/js/2.97723445.chunk.js": "/baby-list/static/js/2.97723445.chunk.js",
-    "static/js/2.97723445.chunk.js.map": "/baby-list/static/js/2.97723445.chunk.js.map",
+    "static/js/2.d3bc8a20.chunk.js": "/baby-list/static/js/2.d3bc8a20.chunk.js",
+    "static/js/2.d3bc8a20.chunk.js.map": "/baby-list/static/js/2.d3bc8a20.chunk.js.map",
     "index.html": "/baby-list/index.html",
-    "precache-manifest.6ccce661f88d8a3d31a6458795f4d56b.js": "/baby-list/precache-manifest.6ccce661f88d8a3d31a6458795f4d56b.js",
+    "precache-manifest.a061eee9ca91817cff1f918a7ab23771.js": "/baby-list/precache-manifest.a061eee9ca91817cff1f918a7ab23771.js",
     "service-worker.js": "/baby-list/service-worker.js",
     "static/css/2.f87e9f44.chunk.css.map": "/baby-list/static/css/2.f87e9f44.chunk.css.map",
-    "static/css/main.32eebc0b.chunk.css.map": "/baby-list/static/css/main.32eebc0b.chunk.css.map",
-    "static/js/2.97723445.chunk.js.LICENSE.txt": "/baby-list/static/js/2.97723445.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/baby-list/static/media/hello_honey.07d70141.otf"
+    "static/css/main.08ba85b9.chunk.css.map": "/baby-list/static/css/main.08ba85b9.chunk.css.map",
+    "static/js/2.d3bc8a20.chunk.js.LICENSE.txt": "/baby-list/static/js/2.d3bc8a20.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/baby-list/static/media/hello_honey.07d70141.otf",
+    "static/media/logo.jpeg": "/baby-list/static/media/logo.238e18da.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.c3c22df0.js",
     "static/css/2.f87e9f44.chunk.css",
-    "static/js/2.97723445.chunk.js",
-    "static/css/main.32eebc0b.chunk.css",
-    "static/js/main.50b7aa98.chunk.js"
+    "static/js/2.d3bc8a20.chunk.js",
+    "static/css/main.08ba85b9.chunk.css",
+    "static/js/main.a5fd2b67.chunk.js"
   ]
 }
