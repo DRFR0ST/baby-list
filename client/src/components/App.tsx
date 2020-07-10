@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "react-jss";
 import { Theme } from '../types';
 import AppBar from './common/AppBar';
