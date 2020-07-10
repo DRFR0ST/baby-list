@@ -39,13 +39,19 @@ const AdminPage = () => {
     const theme = useTheme();
     const classes = useStyles({theme});
 
-    const handleSubmit = (e: any) => { // e: React.FormEvent<HTMLFormElement>
+    const handleSubmit = async (e: any) => { // e: React.FormEvent<HTMLFormElement>
         e.preventDefault();
 
         const data = makeDataFromInput(e.target);
 
         const cli = new Client(config.host_url);
-        cli.execute(new ProductCreate(data));
+        const rq = await cli.execute(new ProductCreate(data));
+
+        if(rq.status === 200) {
+            alert("Małe skrzatki pomyślnie dodały produkt do listy! ❤️")
+        } else {
+            alert("Małym skrzatkom coś się pomieszało i nie udało się dodać produtku. Zawołaj Mike'a!")
+        }
     }
 
     return <div className={classes.root}>

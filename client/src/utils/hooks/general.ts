@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 export const useForkedState = <T extends any[], R>(fn: (...args: T) => R, ...args: T) => {
     const ref = useRef(null as unknown as [R, (value: R) => void]);
@@ -21,13 +21,7 @@ export const useForkedState = <T extends any[], R>(fn: (...args: T) => R, ...arg
     return ref.current;
 }
 
-let id = 0;
 export const useSignal = () => {
-    const [, setState] = useState(0);
-
-    const signal = () => {
-        setState(id++);
-    }
-
-    return signal;
+    const [, updateState] = useState();
+    return useCallback(() => updateState({}), []);
 }

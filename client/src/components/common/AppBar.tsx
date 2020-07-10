@@ -1,36 +1,34 @@
 import React from "react";
 import { useTheme, createUseStyles } from "react-jss";
 import { useHistory } from "react-router-dom";
+import MelissaLogo from "../../assets/images/logo.jpeg"
 
 let useStyles = createUseStyles(() => ({
     root: {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "0 20px",
+        padding: "10px 20px",
         height: "104px",
-        marginBottom: "30px"
+        marginBottom: "30px",
+        position: "relative",
     },
     logo: {
         userSelect: "none",
         cursor: "pointer",
         fontSize: "56px",
-        color: "#7bc69f",
-        textShadow: "1px -3px #000000",
+        color: "black", //"#7bc69f",
+        background: "#fbfcfe"
+        //textShadow: "1px -3px #000000",
+    },
+    logoWrapper: {
+        position: "relative",
+        height: "inherit",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start"
     }
 }));
-
-// const PATH_MAP = {
-//     "/": "Home",
-//     "/product/": "Home > Product"
-// }
-
-// const mapPathname = (pathname: string) => {
-//     if(pathname === "/") return PATH_MAP["/"];
-//     if(pathname.split("/")[1] === "product") return PATH_MAP["/product/"]
-
-//     return PATH_MAP[pathname as keyof typeof PATH_MAP]
-// }
 
 const AppBar = () => {
     const history = useHistory();
@@ -39,7 +37,10 @@ const AppBar = () => {
     const classes = useStyles({theme});
     
     return <div className={`${classes.root} branded-background`}>
-        <h1 className={`logo-font ${classes.logo}`} onClick={() => history.push("/")}>Wyprawka Melisski</h1>
+        <div onClick={() => history.push("/")} className={classes.logoWrapper}>
+            <img src={MelissaLogo} alt="Melissa" style={{maxHeight: "100%", marginRight: "15px"}} />
+            <h1 className={`logo-font ${classes.logo}`} >Wyprawka Melisski</h1>
+        </div>
     </div>
 }
 

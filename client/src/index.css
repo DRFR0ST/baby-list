@@ -23,7 +23,13 @@ code {
   font-family: "Hello-Honey";
 }
 
-.branded-background {
+/* .branded-background {
   background: url(./assets/images/greenhouse.png);
   background-size: 500px 500px;
+} */
+
+body {
+  background: url(./assets/images/background_leaf.JPG);
+  background-size: 478px 850px;
+  /* background-size: 500px 500px; */
 }

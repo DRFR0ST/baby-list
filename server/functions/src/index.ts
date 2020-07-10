@@ -23,7 +23,19 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+function compare(a: any, b: any) {
+    if (a.order < b.order) {
+      return -1;
+    }
+    if (a.order > b.order) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
+
 export const productList = functions.https.onRequest(async (request: any, response: any) => {
+    response.set('Access-Control-Allow-Origin', "*")
     const { volume } = request.query;
 
     const collection = await db.collection("products").get();
@@ -41,10 +53,11 @@ export const productList = functions.https.onRequest(async (request: any, respon
 
     if (volume > 0) list.length = volume;
 
-    return void response.json({ status: 200, data: list });
+    return void response.json({ status: 200, data: list.sort(compare) });
 });
 
 export const productInfo = functions.https.onRequest(async (request: any, response: any) => {
+    response.set('Access-Control-Allow-Origin', "*")
     const { token } = request.query;
     if(!token) return void response.json({ status: 400, message: "No product token provided." });
 
@@ -58,6 +71,7 @@ export const productInfo = functions.https.onRequest(async (request: any, respon
 });
 
 export const productCreate = functions.https.onRequest(async (request: any, response: any) => {
+    response.set('Access-Control-Allow-Origin', "*")
     const { name, description, url, media_url, available=true } = request.query;
     if(!name || !description || !url || !media_url) return void response.json({ status: 400, message: "All data has to be provided." });
 
@@ -78,10 +92,20 @@ export const productCreate = functions.https.onRequest(async (request: any, resp
 });
 
 export const productDelete = functions.https.onRequest(async (request: any, response: any) => {
+    response.set('Access-Control-Allow-Origin', "*")
     const { token } = request.query;
     if(!token) return void response.json({ status: 400, message: "No product token provided." });
-
+    
     await db.collection("products").doc(token).delete();
-
+    
     return void response.json({ status: 204 });
 });
+
+// export const productDeactivate = functions.https.onRequest(async (request: any, response: any) => {
+//     const { token } = request.query;
+//     if(!token) {
+//          response.json({ status: 400, message: "No product token provided." });
+//     }
+
+//     await db.collection("products").doc(token);
+// }); 
